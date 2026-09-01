@@ -103,15 +103,4 @@ router.post("/chat", async(req, res) => {
 
 
 
-
-router.get("/test-openai", async (req, res) => {
-    try {
-        const response = await getOpenAIAPIResponse("Say hello in one sentence");
-        res.json({ reply: response });
-    } catch (err) {
-        console.log(err);
-        res.status(500).json({ error: err.message });
-    }
-});
-
 export default router;

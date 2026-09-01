@@ -24,8 +24,14 @@ const connectDB = async() => {
     } catch(err) {
         console.log("Failed to connect with Db", err);
     }
+    
 }
 
+app.get("/test", async(req, res) => {
+    res.json({ 
+        message: "Test successful" 
+    })
+});
 
 // app.post("/test", async (req, res) => {
 //     const options = {
